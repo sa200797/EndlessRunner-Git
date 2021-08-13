@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - ErrorTextLayer
+  - iconView
+  - BackgroundLayer
+  - SecondaryTextLayer
+  - SurfaceLayer
+  - PrimaryLayer
+  - SecondaryLayer
+  - PrimaryTextLayer
+  - HoverLayer
+  - ErrorLayer
+  - SurfaceTextLayer
+  - BackgroundTextLayer
+  - DisabledTextLayer
+  - DisabledLayer
+  - Gems
+  - Obstacle
+  - SecondryLayer
+  - Search
+  - GameOver
+  - Jio
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground Layer
+  - Head
+  - Left
+  - Right
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: SystemUI
+    uniqueID: 291007281
+    locked: 0
