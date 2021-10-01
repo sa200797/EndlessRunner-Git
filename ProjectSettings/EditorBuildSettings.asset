@@ -8,12 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/splash.unity
     guid: f00d5d0630e42794bafe135ea633d969
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 978d7f4b5141a074d9818d1d1f6cffcc
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/MainGame.unity
+    guid: e8d095148266ab6438e5d860268d5ac6
   - enabled: 0
     path: Assets/Scenes/SpawnTest.unity
     guid: 1bf593be09cdc944f86098b471bafb35

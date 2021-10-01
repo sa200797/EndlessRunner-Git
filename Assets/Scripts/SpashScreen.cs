@@ -19,8 +19,8 @@ public class SpashScreen : MonoBehaviour
 
     IEnumerator ChangeScene()
     {
-        yield return new WaitForSeconds(3.0f);
-        SceneManager.LoadScene("SampleScene");
+        yield return new WaitForSeconds(0f);
+        SceneManager.LoadScene("Menu");
 
     }
 

@@ -177,7 +177,6 @@ public class InterfaceExample : MonoBehaviour, ISelectHandler,
     {
         Debug.Log("OnVoiceAction");
     }
-
     public void OnTouchStart(TouchEventData eventData, Vector2 TouchData)
     {
         Debug.Log("OnTouchStarted " + TouchData.ToString());

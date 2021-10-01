@@ -86,11 +86,11 @@ public class PlayerManager : MonoBehaviour
         //    Destroy(startingText);
         //}
         
-        if (!isGameStarted && Input.GetKeyDown(KeyCode.J))
+        /*if (!isGameStarted && Input.GetKeyDown(KeyCode.J))
         {
             isGameStarted = true;
             Destroy(startingText);
-        }
+        }*/
     }
 
 

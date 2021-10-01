@@ -389,7 +389,6 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -738,6 +737,7 @@ GameObject:
   - component: {fileID: 2461520328550099710}
   - component: {fileID: 2461520328550099682}
   - component: {fileID: 2461520328550099681}
+  - component: {fileID: 6146242540581753485}
   m_Layer: 9
   m_Name: Michelle
   m_TagString: Player
@@ -803,6 +803,23 @@ MonoBehaviour:
   jumpHeight: 1.8
   animator: {fileID: 5750540681580357906}
   slideDuration: 1.4
+--- !u!114 &6146242540581753485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2461520328550099680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae18f9d652a5bc459aa2d18ea9da208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CallTime: 0
+  MexTimeSecond: 1
+  WaitTimeMillisecond: 1
+  currCountdownValue: 15
+  playerController: {fileID: 0}
 --- !u!1 &2505912677890294748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1212,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4057772151548390263}
-  m_LocalRotation: {x: 0.000000059318644, y: 0.000088365014, z: -0.0000000042281463, w: 1}
+  m_LocalRotation: {x: 0.000000059318644, y: 0.000088365014, z: -0.0000000042281463,
+    w: 1}
   m_LocalPosition: {x: 3.231037e-11, y: 0.24203573, z: 1.7166471e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1969,7 +1987,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7584492358448932498}
-  m_LocalRotation: {x: -0.00000016100014, y: -0.00010932026, z: 0.000000064977655, w: 1}
+  m_LocalRotation: {x: -0.00000016100014, y: -0.00010932026, z: 0.000000064977655,
+    w: 1}
   m_LocalPosition: {x: -2.5905004e-11, y: 0.24202721, z: -5.676185e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

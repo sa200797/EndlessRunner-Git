@@ -24,6 +24,8 @@ TagManager:
   - Search
   - GameOver
   - Jio
+  - JioCanvas
+  - JioCamera
   layers:
   - Default
   - TransparentFX

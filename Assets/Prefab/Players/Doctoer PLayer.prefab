@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 8477945407501906405}
   - component: {fileID: 8477945407501906404}
   - component: {fileID: 8477945407501906410}
-  - component: {fileID: 894672107}
+  - component: {fileID: 8232597126651486317}
   m_Layer: 0
   m_Name: Doctoer PLayer
   m_TagString: Player
@@ -108,7 +108,7 @@ MonoBehaviour:
   jumpHeight: 2
   animator: {fileID: 8477945408926962806}
   slideDuration: 1.5
---- !u!114 &894672107
+--- !u!114 &8232597126651486317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,9 +117,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8477945407501906407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a5a2ba390b8e4c43adc3d8a47bb6ac2, type: 3}
+  m_Script: {fileID: 11500000, guid: cae18f9d652a5bc459aa2d18ea9da208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CallTime: 0
+  MexTimeSecond: 1
+  WaitTimeMillisecond: 1
+  currCountdownValue: 15
   playerController: {fileID: 0}
 --- !u!95 &8477945408926962806
 Animator:
