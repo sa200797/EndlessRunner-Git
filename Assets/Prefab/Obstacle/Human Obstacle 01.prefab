@@ -931,6 +931,8 @@ GameObject:
   - component: {fileID: 2353673119596525427}
   - component: {fileID: 3162157611283901903}
   - component: {fileID: 3162157611283901902}
+  - component: {fileID: 2365271005676763152}
+  - component: {fileID: 2601623980735570450}
   m_Layer: 0
   m_Name: Human Obstacle 01
   m_TagString: Obstacle
@@ -968,12 +970,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3162157611283901897}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.17697853
-  m_Height: 1.7441268
+  m_Radius: 0.16455032
+  m_Height: 1.45
   m_Direction: 1
-  m_Center: {x: 0.002619207, y: 0.93313813, z: 0.0077323616}
+  m_Center: {x: 0.002619207, y: 0.75, z: 0.007732372}
 --- !u!95 &3162157611283901902
 Animator:
   serializedVersion: 3
@@ -993,6 +995,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2365271005676763152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162157611283901897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0467ae23170594438d28bb69cee85ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Childs: []
+  SphereCollider: {fileID: 0}
+  CapsuleCollider: {fileID: 0}
+--- !u!65 &2601623980735570450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3162157611283901897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29690605, y: 1.5286583, z: 0.2838586}
+  m_Center: {x: 0, y: 0.7595452, z: 0}
 --- !u!1 &3209934896255663183
 GameObject:
   m_ObjectHideFlags: 0

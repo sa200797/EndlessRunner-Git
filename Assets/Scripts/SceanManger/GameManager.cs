@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,34 +15,34 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetupPostion();
+
     }
 
     private void SetupPostion()
     {
-        if (JioCamera == null)
-            JioCamera = GameObject.FindGameObjectWithTag("JioCamera");
+        //if (JioCamera == null)
+        JioCamera = GameObject.FindGameObjectWithTag("JioCamera");
 
         if (JioCamera == null)
             Debug.Log("Onject not Fill");
         else
             JioCamera.transform.position = JioCameraPostion;
 
-        if (JioCanvas == null) 
-        {
-            JioCanvas = GameObject.FindGameObjectWithTag("JioCanvas");
-        }
+        //if (JioCanvas == null) { JioCanvas = GameObject.FindGameObjectWithTag("JioCanvas"); }
+
+        JioCanvas = GameObject.FindGameObjectWithTag("JioCanvas");
         if (JioCanvas == null)
         {
             Debug.Log("Object Not Fill");
         }
-        else 
+        else
         {
             JioCanvas.GetComponent<RectTransform>().anchoredPosition3D = JioCanvasPostion;
         }
-
-
-        
     }
 
-   
+
+
+
+
 }

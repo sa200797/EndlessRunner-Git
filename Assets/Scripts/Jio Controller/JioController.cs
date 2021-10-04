@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class JioController : MonoBehaviour, ISwipeHandler , ITouchHandler
+public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
 {
 
     [SerializeField] bool CallTime;
@@ -114,23 +114,6 @@ public class JioController : MonoBehaviour, ISwipeHandler , ITouchHandler
 
     }
 
-    public void OnSwipeCanceled(SwipeEventData eventData)
-    {
-        //throw new System.NotImplementedException();
-    }
-    public void OnSwipeCompleted(SwipeEventData eventData)
-    {
-        //throw new System.NotImplementedException();
-    }
-    public void OnSwipeStarted(SwipeEventData eventData)
-    {
-        //throw new System.NotImplementedException();
-    }
-    public void OnSwipeUpdated(SwipeEventData eventData, Vector2 swipeData)
-    {
-        //throw new System.NotImplementedException();
-    }
-
     public void OnTouchStart(TouchEventData eventData, Vector2 TouchData)
     {
         CallTime = true;
@@ -148,49 +131,4 @@ public class JioController : MonoBehaviour, ISwipeHandler , ITouchHandler
 
 
 
-
-
-    public void OnBackAction()
-    {
-        //  LevelEvents.instance.PausePannel();
-
-        if (!PlayerManager.isGameStarted)
-            return;
-
-
-
-        if (PlayerManager.gameOver)
-            return;
-
-
-        //  Debug.Log("OnBackAction");
-        if (PlayerManager.isGamePaused)
-        {
-            ResumeGame();
-            FindObject.instance.gamePausedPanel.SetActive(false);
-        }
-        else
-        {
-            PauseGame();
-            FindObject.instance.gamePausedPanel.SetActive(true);
-        }
-    }
-    public void PauseGame()
-    {
-        if (!PlayerManager.isGamePaused && !PlayerManager.gameOver)
-        {
-            Time.timeScale = 0;
-            PlayerManager.isGamePaused = true;
-        }
-    }
-    public void ResumeGame()
-    {
-        if (PlayerManager.isGamePaused)
-        {
-            Time.timeScale = 1;
-            PlayerManager.isGamePaused = false;
-        }
-    }
-
-    
 }

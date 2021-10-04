@@ -31,8 +31,6 @@ public class PlayerController : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Time.timeScale = 1.2f;
     }
-
-
     private void FixedUpdate()
     {
         if (!PlayerManager.isGameStarted || PlayerManager.gameOver)
@@ -129,12 +127,20 @@ public class PlayerController : MonoBehaviour
         velocity.y = Mathf.Sqrt(jumpHeight * 2 * -gravity);
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if(hit.transform.tag == "Obstacle")
         {
             PlayerManager.gameOver = true;
            // FindObjectOfType<AudioManager>().PlaySound("GameOver");
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Obstacle")
+        {
+            PlayerManager.gameOver = true;
+            // FindObjectOfType<AudioManager>().PlaySound("GameOver");
         }
     }
 

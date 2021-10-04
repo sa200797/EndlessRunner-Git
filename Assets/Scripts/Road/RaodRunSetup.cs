@@ -11,7 +11,7 @@ public class RaodRunSetup : MonoBehaviour
     [Space(20)]
     [SerializeField] int NumberOffTils;
     [SerializeField] GameObject RoadTilsPrefab;
-    [SerializeField] List<GameObject> RoadHoder;
+    [SerializeField] public List<GameObject> RoadHoder;
     [SerializeField] float speedZ;
     [SerializeField] float Offset;
     [SerializeField] float EndPotion;
@@ -25,7 +25,7 @@ public class RaodRunSetup : MonoBehaviour
     }
     void Update()
     {
-        if(PlayerManager.isGameStarted == true)
+        if (PlayerManager.isGameStarted == true)
             roadRunSetup();
     }
 
@@ -43,16 +43,16 @@ public class RaodRunSetup : MonoBehaviour
                 ExchangeChange = RoadHoder[index].gameObject;
                 ExchangeChange.SetActive(false);
 
-                utility.Move(RoadHoder , index , RoadHoder.Count-1);
+                utility.Move(RoadHoder, index, RoadHoder.Count - 1);
 
                 int newIndex = RoadHoder.Count - 2;
 
                 RoadHoder[RoadHoder.Count - 2].transform.position = new Vector3(
                     RoadHoder[RoadHoder.Count - 2].transform.position.x,
                     RoadHoder[RoadHoder.Count - 2].transform.position.y,
-                    RoadHoder[newIndex-1].transform.position.z + Offset);
+                    RoadHoder[newIndex - 1].transform.position.z + Offset);
 
-                ExchangeChange.SetActive(true);               
+                ExchangeChange.SetActive(true);
 
             }
             if (RoadHoder[index] != null)
@@ -62,7 +62,7 @@ public class RaodRunSetup : MonoBehaviour
     #region Normal
     void setupRaods()
     {
-        if (NumberOffTils != RoadHoder.Count) 
+        if (NumberOffTils != RoadHoder.Count)
         {
             int availableTils = NumberOffTils - RoadHoder.Count;
             for (int i = 0; i < availableTils; i++)
@@ -74,7 +74,7 @@ public class RaodRunSetup : MonoBehaviour
             for (int i = 0; i < RoadHoder.Count; i++)
             {
                 RoadHoder[i].name = "Road" + i;
-                RoadHoder[i].transform.position = new Vector3(RoadHoder[i].transform.position.x,RoadHoder[i].transform.position.y,RoadHoder[i].transform.position.z + TilsPoition);
+                RoadHoder[i].transform.position = new Vector3(RoadHoder[i].transform.position.x, RoadHoder[i].transform.position.y, RoadHoder[i].transform.position.z + TilsPoition);
                 TilsPoition += 210;
             }
         }

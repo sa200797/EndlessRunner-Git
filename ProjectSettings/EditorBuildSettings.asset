@@ -14,7 +14,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGame.unity
     guid: e8d095148266ab6438e5d860268d5ac6
-  - enabled: 0
-    path: Assets/Scenes/SpawnTest.unity
-    guid: 1bf593be09cdc944f86098b471bafb35
   m_configObjects: {}

@@ -1987,6 +1987,7 @@ GameObject:
   - component: {fileID: 7615308537037253300}
   - component: {fileID: 7126051858143686671}
   - component: {fileID: 6161907069146126382}
+  - component: {fileID: 6319502932634561863}
   m_Layer: 0
   m_Name: Human Obstacle 2 Idle
   m_TagString: Obstacle
@@ -2042,12 +2043,27 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7126051858143686670}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.18809526
-  m_Height: 1.881884
+  m_Radius: 0.17690253
+  m_Height: 1.45
   m_Direction: 1
-  m_Center: {x: -0.0021275282, y: 0.8852026, z: 0}
+  m_Center: {x: -0.0021275282, y: 0.75, z: 0}
+--- !u!114 &6319502932634561863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7126051858143686670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0467ae23170594438d28bb69cee85ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Childs: []
+  SphereCollider: {fileID: 0}
+  CapsuleCollider: {fileID: 0}
 --- !u!1 &7361079922304444118
 GameObject:
   m_ObjectHideFlags: 0

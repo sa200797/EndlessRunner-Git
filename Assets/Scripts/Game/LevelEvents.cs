@@ -6,21 +6,21 @@ public class LevelEvents : MonoBehaviour
 {
     public static LevelEvents instance;
 
-   // GameObject child;
+    // GameObject child;
     // public GameObject gamePausedPanel;
     //  public Button pauseButton; 
 
-    
+
     private void Update()
     {
         if (!PlayerManager.isGameStarted)
             return;
 
         if (PlayerManager.gameOver)
-           // pauseButton.interactable = false;
+            // pauseButton.interactable = false;
 
-        if (PlayerManager.gameOver)
-            return;
+            if (PlayerManager.gameOver)
+                return;
 
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,21 +39,18 @@ public class LevelEvents : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             ReplayGame();
         }
-
-
 
         FindObject.instance.highScoreText.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
         FindObject.instance.gems_Text.text = PlayerPrefs.GetInt("TotalGems", 0).ToString();
     }
     public void ReplayGame()
     {
-       
-        SceneManager.LoadScene("SampleScene");
-        
+        SceneManager.LoadScene("MainGame");
+
     }
     public void GoToMenu()
     {
@@ -104,6 +101,22 @@ public class LevelEvents : MonoBehaviour
             PauseGame();
             FindObject.instance.gamePausedPanel.SetActive(true);
         }
+    }
+
+    public void changeScene(string SceneName)
+    {
+       
+        if (UnityEngine.SceneManagement.SceneManager.GetSceneByName(SceneName).IsValid() == false)
+        {
+            SceneManager.LoadScene(SceneName);
+        }
+        else
+        {
+            Debug.LogWarning("Load Scene Failed. " + SceneName + " not found.");
+        }
+        
+
+
     }
 
 }

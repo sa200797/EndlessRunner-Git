@@ -2905,6 +2905,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ebd066fa5f40c43ab610156c37385e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnBackButtonClick:
+    m_PersistentCalls:
+      m_Calls: []
+  TutorialPanels: {fileID: 1790248550}
 --- !u!4 &1417423469
 Transform:
   m_ObjectHideFlags: 0
