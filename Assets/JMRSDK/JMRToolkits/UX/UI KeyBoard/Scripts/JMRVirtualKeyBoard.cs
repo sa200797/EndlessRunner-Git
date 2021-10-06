@@ -43,6 +43,7 @@ namespace JMRSDK.Toolkit.UI
 
         #region PUBLIC FIELDS
         public bool isShown;
+        public event Action OnHideKeyboard;
         #endregion
 
         #region Static Actions
@@ -277,7 +278,6 @@ namespace JMRSDK.Toolkit.UI
                 JMRVoiceManager.OnSpeechError -= OnSpeechError;
                 JMRVoiceManager.OnSpeechCancelled -= OnSpeechCancelled;
             }
-
             isShown = false;
             if (!hideWitoutNotify && !hideWithoutDeselect)
             {
@@ -298,6 +298,7 @@ namespace JMRSDK.Toolkit.UI
                 alphabetsText.gameObject.SetActive(true);
             }
             gameObject.SetActive(false);
+            OnHideKeyboard?.Invoke();
         }
 
         /// <summary>
@@ -425,7 +426,10 @@ namespace JMRSDK.Toolkit.UI
             if (isListeningForVoiceCommand && voiceCommandField != null)
             {
                 isListeningForVoiceCommand = false;
-                ShowKeyBoard(voiceCommandField);
+                if (obj == "ERROR_NO_MATCH")
+                    HideKeyBoard();
+                else
+                    ShowKeyBoard(voiceCommandField);
             }
             voiceCommandField = null;
         }
@@ -436,7 +440,7 @@ namespace JMRSDK.Toolkit.UI
             if (isListeningForVoiceCommand && voiceCommandField != null)
             {
                 isListeningForVoiceCommand = false;
-                ShowKeyBoard(voiceCommandField);
+                HideKeyBoard();
             }
             voiceCommandField = null;
         }

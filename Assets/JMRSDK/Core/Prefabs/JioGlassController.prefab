@@ -524,7 +524,7 @@ MonoBehaviour:
   swipeSensitivityEditor: 0.1
   longPressDelayTactile: 0.7
   doubleClickTimeoutTactile: 0.25
-  longPressDelayTrigger: 1
+  longPressDelayTrigger: 0.3
   doubleClickTimeOutTrigger: 0
   dragOffset: 0.03
   isControllerConnected: 0

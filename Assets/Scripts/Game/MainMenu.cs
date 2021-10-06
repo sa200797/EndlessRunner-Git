@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour , IBackHandler
     {
         Time.timeScale = 1;
         SetupBack();
+        JMRInputManager.Instance.AddGlobalListener(gameObject);
     }
 
     public void PlayGame()

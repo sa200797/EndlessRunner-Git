@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae18f9d652a5bc459aa2d18ea9da208, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CallTime: 0
+  CallTime: 1
   MexTimeSecond: 1
   WaitTimeMillisecond: 1
   currCountdownValue: 15

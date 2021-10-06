@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="${applicationId}" xmlns:tools="http://schemas.android.com/tools" android:installLocation="preferExternal">
   <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
   <application android:theme="@style/UnityThemeSelector" android:icon="@mipmap/app_icon" android:label="@string/app_name" android:requestLegacyExternalStorage="true" android:screenOrientation="landscape">
-    <activity 
-			android:name="com.jiotesseract.mr.sdk.JmrUnityActivity"
+    <activity android:name="com.jiotesseract.mr.sdk.JmrUnityActivity"
 			  android:label="@string/app_name"
         android:launchMode="singleTask"
 			  android:configChanges="orientation|keyboardHidden|screenSize|screenLayout">

@@ -934,6 +934,11 @@ namespace JMRSDK.Toolkit.UI
             //Debug.Log("*** OnEnable() *** - " + this.name);
 
             base.OnEnable();
+            if (clearButton == null && GetComponentInChildren<JMRUIPrimaryButton>())
+            {
+                clearButton = GetComponentInChildren<JMRUIPrimaryButton>();
+            }
+            
             wasError = !IsError;
             if (Submit == null)
             {
@@ -2101,6 +2106,7 @@ namespace JMRSDK.Toolkit.UI
         /// <param name="obj"></param>
         private void ON_TEXT_CHANGED(UnityEngine.Object obj)
         {
+            if(clearButton!=null)
             clearButton.gameObject.SetActive(textComponent.text.Length > 1);
             if (!InteractableActive())
                 return;

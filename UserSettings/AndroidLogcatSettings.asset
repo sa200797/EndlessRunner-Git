@@ -2,8 +2,8 @@
     "m_SelectedDeviceId": "38616d07",
     "m_SelectedPackage": {
         "deviceId": "38616d07",
-        "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-        "processId": 638,
+        "name": "com.DefaultCompany.PandemicDash",
+        "processId": 16988,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,49 +11,43 @@
         {
             "deviceId": "38616d07",
             "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-            "processId": 10354,
-            "exited": true
-        },
-        {
-            "deviceId": "38616d07",
-            "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-            "processId": 13189,
-            "exited": true
-        },
-        {
-            "deviceId": "38616d07",
-            "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-            "processId": 17595,
-            "exited": true
-        },
-        {
-            "deviceId": "38616d07",
-            "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-            "processId": 19305,
-            "exited": true
-        },
-        {
-            "deviceId": "38616d07",
-            "name": "com.DefaultCompany.CovidRacingGame3DNURP",
-            "processId": 20409,
-            "exited": true
-        },
-        {
-            "deviceId": "38616d07",
-            "name": "com.DefaultCompany.CovidRacingGame3DNURP",
             "processId": 28341,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "38616d07",
             "name": "com.android.settings",
             "processId": 27358,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "38616d07",
             "name": "com.DefaultCompany.CovidRacingGame3DNURP",
             "processId": 638,
+            "exited": true
+        },
+        {
+            "deviceId": "38616d07",
+            "name": "com.DefaultCompany.PandemicDash",
+            "processId": 30854,
+            "exited": true
+        },
+        {
+            "deviceId": "38616d07",
+            "name": "com.DefaultCompany.PandemicDash",
+            "processId": 14574,
+            "exited": true
+        },
+        {
+            "deviceId": "38616d07",
+            "name": "com.DefaultCompany.PandemicDash",
+            "processId": 15589,
+            "exited": false
+        },
+        {
+            "deviceId": "38616d07",
+            "name": "com.DefaultCompany.PandemicDash",
+            "processId": 16988,
             "exited": false
         },
         {

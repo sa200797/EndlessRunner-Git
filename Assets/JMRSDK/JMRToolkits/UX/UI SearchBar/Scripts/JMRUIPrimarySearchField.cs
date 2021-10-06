@@ -992,6 +992,7 @@ namespace JMRSDK.Toolkit.UI
                 // Cache reference to Vertical Scrollbar RectTransform and add listener.
                 if (verticalScrollbar != null)
                 {
+                    //textComponent.ignoreRectMaskCulling = true;
                     textComponent.enableCulling = true;
                     verticalScrollbar.onValueChanged.AddListener(OnScrollbarValueChange);
                 }

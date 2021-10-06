@@ -31,16 +31,15 @@ public class GameManager : MonoBehaviour
         //if (JioCanvas == null) { JioCanvas = GameObject.FindGameObjectWithTag("JioCanvas"); }
 
         JioCanvas = GameObject.FindGameObjectWithTag("JioCanvas");
-        if (JioCanvas == null)
-        {
-            Debug.Log("Object Not Fill");
-        }
-        else
-        {
-            JioCanvas.GetComponent<RectTransform>().anchoredPosition3D = JioCanvasPostion;
-        }
+        if (JioCanvas == null) { Debug.Log("Object Not Fill"); }
+        else { JioCanvas.GetComponent<RectTransform>().anchoredPosition3D = JioCanvasPostion; }
     }
 
+    [ContextMenu("UpdateCanvas")]
+    void UpdatePostion()
+    {
+        SetupPostion();
+    }
 
 
 

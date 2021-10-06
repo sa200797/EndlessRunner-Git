@@ -15,6 +15,8 @@ public class BackButtonClick : MonoBehaviour, IBackHandler
 
     void Start()
     {
+        JMRInputManager.Instance.AddGlobalListener(gameObject);
+
         SetupBack();
     }
 

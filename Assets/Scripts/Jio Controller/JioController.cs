@@ -4,8 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
-{
+public class JioController : MonoBehaviour
+    , ITouchHandler
+    //, IBackHandler
+    , ISelectHandler
+    , ISelectClickHandler
+    , IFocusable
+    , ISwipeHandler  
+    , IMenuHandler
+    , IVoiceHandler
+    , IFn1Handler
+    , IFn2Handler
+    , IManipulationHandler
+{   
 
     [SerializeField] bool CallTime;
 
@@ -55,8 +66,8 @@ public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
     void OnGameStart() 
     {
         CallTime = true;
-        currCountdownValue = MexTimeSecond;
-        StartCoroutine(StartCountdown());
+        //currCountdownValue = MexTimeSecond;
+        //StartCoroutine(StartCountdown());
     }
     void WaitForSeconds()
     {
@@ -68,6 +79,27 @@ public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
         StartCoroutine(StartCountdown());
     }
 
+    public void OnSwipeStarted(SwipeEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnSwipeUpdated(SwipeEventData eventData, Vector2 swipeData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnSwipeCompleted(SwipeEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnSwipeCanceled(SwipeEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+
     public void OnSwipeDown(SwipeEventData eventData, float value)
     {
         //throw new System.NotImplementedException();
@@ -76,36 +108,12 @@ public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
         {
             StartCoroutine(playerController.Slide());
             WaitForSeconds();
-
-
         }
     }
-    public void OnSwipeLeft(SwipeEventData eventData, float value)
-    {
-        //throw new System.NotImplementedException();
-        if (CallTime == true)
-        {
-            playerController.MoveLeft();
-            WaitForSeconds();
-        }
-
-    }
-
-    public void OnSwipeRight(SwipeEventData eventData, float value)
-    {
-        //throw new System.NotImplementedException();
-        if (CallTime == true)
-        {
-            playerController.MoveRight();
-            WaitForSeconds();
-        }
-
-    }
-
-   
     public void OnSwipeUp(SwipeEventData eventData, float value)
     {
         //throw new System.NotImplementedException();
+        Debug.Log("OnSwipeUp");
         if (CallTime == true)
         {
             playerController.Jump();
@@ -113,7 +121,28 @@ public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
         }
 
     }
+    public void OnSwipeLeft(SwipeEventData eventData, float value)
+    {
+        //throw new System.NotImplementedException();
+        Debug.Log("OnSwipeLeft");
+        if (CallTime == true)
+        {
+            playerController.MoveLeft();
+            WaitForSeconds();
+        }
 
+    }
+    public void OnSwipeRight(SwipeEventData eventData, float value)
+    {
+        //throw new System.NotImplementedException();
+        Debug.Log("OnSwipeRight");
+        if (CallTime == true)
+        {
+            playerController.MoveRight();
+            WaitForSeconds();
+        }
+
+    }
     public void OnTouchStart(TouchEventData eventData, Vector2 TouchData)
     {
         CallTime = true;
@@ -129,6 +158,68 @@ public class JioController : MonoBehaviour,  ITouchHandler //, IBackHandler
 
     }
 
+    /*public void OnBackAction()
+    {
+        //throw new System.NotImplementedException();
+    }*/
 
+    public void OnSelectDown(SelectEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
 
+    public void OnSelectUp(SelectEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnSelectClicked(SelectClickEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnFn1Action()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnFn2Action()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnFocusEnter()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnFocusExit()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnVoiceAction()
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnManipulationStarted(ManipulationEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnManipulationUpdated(ManipulationEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnManipulationCompleted(ManipulationEventData eventData)
+    {
+        //throw new System.NotImplementedException();
+    }
+
+    public void OnMenuAction()
+    {
+        //throw new System.NotImplementedException();
+    }
 }

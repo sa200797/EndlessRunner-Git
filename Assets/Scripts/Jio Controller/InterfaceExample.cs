@@ -4,16 +4,16 @@ using JMRSDK.InputModule;
 using UnityEngine;
 public class InterfaceExample : MonoBehaviour
     , ISelectHandler
-    ,  ISelectClickHandler
+    , ISelectClickHandler
     , IFocusable
     , ISwipeHandler
     , ITouchHandler
     , IBackHandler
     , IMenuHandler
     , IVoiceHandler
-    , IFn1Handler,
-
-  IFn2Handler, IManipulationHandler
+    , IFn1Handler
+    , IFn2Handler
+    , IManipulationHandler
 {
 
     public PlayerController playerController;
